@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    noevim
+    neovim
     wget
     git
     starship
