@@ -12,6 +12,9 @@
   ];
 
   programs.zsh.enable = true;
+
+  programs.niri.enable = true;
+
   programs.dankMaterialShell = {
     enable = true;
     niri = {

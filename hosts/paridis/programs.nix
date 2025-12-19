@@ -16,8 +16,6 @@
     bibata-cursors
  ];
 
-  programs.niri.enable = true;
-
   environment.variables = {
     XCURSOR_THEME = "Bibata-Modern-Ice";
     XCURSOR_SIZE = "24";  
