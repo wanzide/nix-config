@@ -8,8 +8,6 @@
 
   programs.zsh.enable = true;
 
-  programs.niri.enable = true;
-
   home.packages = with pkgs; [
     google-chrome
     feishu
