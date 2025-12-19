@@ -7,5 +7,12 @@
 
   programs.zsh.enable = true;
 
+  home.packages = with pkgs; [
+    google-chrome
+    feishu
+    wechat
+    clash-verge-rev
+  ];
+
   programs.home-manager.enable = true;
 }

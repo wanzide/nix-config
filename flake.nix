@@ -23,8 +23,7 @@
       specialArgs = { inherit self; }; # 可选：传给 NixOS modules
 
       modules = [
-        ./hosts/${hostname}/configuration.nix
-        ./hosts/${hostname}/hardware-configuration.nix
+        ./hosts/${hostname}
 
         home-manager.nixosModules.home-manager
         {
