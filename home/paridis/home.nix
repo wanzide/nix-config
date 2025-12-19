@@ -1,0 +1,11 @@
+{ config, pkgs, ... }:
+
+{
+  home.username = "paridis";
+  home.homeDirectory = "/home/paridis";
+  home.stateVersion = "25.11";
+
+  programs.zsh.enable = true;
+
+  programs.home-manager.enable = true;
+}
