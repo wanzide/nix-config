@@ -8,9 +8,14 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, dms, ... }:
   let
     system = "x86_64-linux"; # 或 aarch64-linux
     hostname = "paridis";
@@ -33,7 +38,7 @@
           home-manager.users.${username} = import ./home/${username}/home.nix;
 
           # 可选：传 inputs 给 home.nix 用
-          home-manager.extraSpecialArgs = { inherit self; };
+          home-manager.extraSpecialArgs = { inherit self dms; };
         }
       ];
     };

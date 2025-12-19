@@ -11,12 +11,16 @@
     nerd-fonts.jetbrains-mono
     btop
     yazi
+    fuzzel
+    alacritty
+    bibata-cursors
  ];
 
-  # 启用 libvirt 服务，这是使用 virt-manager 的前提
-  virtualisation.libvirtd = {
-    enable = true;
-   # 启用 virtiofsd 支持，这会自动处理 qemu 依赖
-    qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+  programs.niri.enable = true;
+
+  environment.variables = {
+    XCURSOR_THEME = "Bibata-Modern-Ice";
+    XCURSOR_SIZE = "24";  
   };
+  
 }
