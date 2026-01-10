@@ -46,11 +46,7 @@
   # U盘自动加载
   services.udisks2.enable = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
-  imports = [
-    inputs.noctalia.nixosModules.default
-  ];
-  # enable the systemd service
-  services.noctalia-shell.enable = true;
+
 
   nix.settings = {
     substituters = [
