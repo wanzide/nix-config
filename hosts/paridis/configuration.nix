@@ -52,6 +52,25 @@
   security.pam.services.gdm.enableGnomeKeyring = true;
 
 
+  hardware = {
+    enableAllFirmware = true; # 自动安装所有固件
+    cpu.intel.updateMicrocode = true; # Intel CPU
+    # cpu.amd.updateMicrocode = true; # AMD CPU
+  };
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [
+      intel-media-driver
+      intel-vaapi-driver
+    ];
+  };
+
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
 
