@@ -14,6 +14,7 @@
     wechat
     clash-verge-rev
     vscode
+    telegram-desktop
   ];
 
   programs.home-manager.enable = true;
