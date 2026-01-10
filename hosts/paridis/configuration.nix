@@ -33,14 +33,18 @@
     ];
     hashedPassword = "$6$yH169ISULImSSenk$EQNPIrM4rFmNUy4vv5KG0lyniVg4B5UhIJYliN0Ml.nlv4JFskP.ZRQ0vTI86dsDbQRaJqoXzkia0orFtUI89/";
   };
-
+  security.sudo.wheelNeedsPassword = false;
   nixpkgs.config.allowUnfree = true;
 
   programs.xwayland.enable = true;
+  programs.niri.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+  security.pam.services.gdm.enableGnomeKeyring = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
+  # U盘自动加载
+  services.udisks2.enable = true;
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
   nix.settings = {
