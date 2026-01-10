@@ -13,6 +13,7 @@
     feishu
     wechat
     clash-verge-rev
+    vscode
   ];
 
   programs.home-manager.enable = true;
