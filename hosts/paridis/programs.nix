@@ -15,7 +15,16 @@
     alacritty
     bibata-cursors
     feishu
-    
+
+    pulseaudio
+    pciutils # lspci
+    ffmpeg
+    libva
+    libva-utils
+    power-profiles-daemon
+    curl
+    bluez
+
     # Portal
     xdg-desktop-portal
     xdg-desktop-portal-gtk
