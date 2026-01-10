@@ -25,7 +25,7 @@
     nixosConfigurations.${hostname} = nixpkgs.lib.nixosSystem {
       inherit system;
 
-      specialArgs = { inherit self; }; # 可选：传给 NixOS modules
+      specialArgs = { inherit self inputs nixpkgs-unstable; }; # 可选：传给 NixOS modules
 
       modules = [
         ./hosts/${hostname}
