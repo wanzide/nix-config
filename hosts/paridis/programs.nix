@@ -26,8 +26,7 @@
 
     # GPU/渲染
     mesa libdrm vulkan-loader
-    # 字体
-    noto-fonts noto-fonts-cjk-sans noto-fonts-emoji
+  
  ];
 
   environment.variables = {
