@@ -10,7 +10,7 @@
 
   home.packages = with pkgs; [
     google-chrome
-    feishu
+ 
     wechat
     clash-verge-rev
     vscode

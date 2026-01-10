@@ -14,7 +14,8 @@
     fuzzel
     alacritty
     bibata-cursors
-
+    feishu
+    
     # Portal
     xdg-desktop-portal
     xdg-desktop-portal-gtk
