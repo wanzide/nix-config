@@ -13,6 +13,7 @@
  
     # wechat
     # clash-verge-rev
+    clash-meta
     vscode
     telegram-desktop
   ];
