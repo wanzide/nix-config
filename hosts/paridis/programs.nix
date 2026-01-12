@@ -14,7 +14,7 @@
     fuzzel
     alacritty
     bibata-cursors
-    feishu
+
 
     pulseaudio
     pciutils # lspci

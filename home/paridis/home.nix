@@ -11,8 +11,8 @@
   home.packages = with pkgs; [
     google-chrome
  
-    wechat
-    clash-verge-rev
+    # wechat
+    # clash-verge-rev
     vscode
     telegram-desktop
   ];
