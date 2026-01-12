@@ -12,8 +12,7 @@
     google-chrome
  
     # wechat
-    clash-verge-rev
-    clash-meta
+    daed
     vscode
     telegram-desktop
   ];
