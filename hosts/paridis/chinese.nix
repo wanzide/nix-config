@@ -22,12 +22,19 @@
     enable = true;
     type = "fcitx5";
     fcitx5.addons = with pkgs; [
-    qt6Packages.fcitx5-chinese-addons # fcitx5-chinese-addons
-    fcitx5-gtk
-    qt6Packages.fcitx5-configtool  # fcitx5-configtool
-    fcitx5-nord 
-   ];
-   fcitx5.waylandFrontend = true;
+      qt6Packages.fcitx5-chinese-addons # fcitx5-chinese-addons
+      fcitx5-gtk
+      qt6Packages.fcitx5-configtool  # fcitx5-configtool
+      fcitx5-nord 
+    ];
+    fcitx5.waylandFrontend = true;
+  };
+
+  # 设置 fcitx5 环境变量（Wayland 下不需要 GTK_IM_MODULE 等）
+  environment.sessionVariables = {
+    # Fcitx5 在 Wayland 下使用 Input Method v2 协议
+    # 不要设置 GTK_IM_MODULE, QT_IM_MODULE, XMODIFIERS
+    # 这些会干扰 Wayland 原生输入法支持
   };
 
   # 中文字体优化
