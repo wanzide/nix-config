@@ -85,14 +85,28 @@
     packages = with pkgs; [
     #  thunderbird
       feishu
+      wechat
     ];
   };
 
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Clash Verge Rev with TUN mode enabled.
+  programs.clash-verge = {
+    enable = true;
+    tunMode = true;
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Use a domestic binary cache mirror (USTC) to speed up package downloads.
+  # cache.nixos.org is kept as a fallback.
+  nix.settings.substituters = [
+    "https://mirrors.ustc.edu.cn/nix-channels/store"
+    "https://cache.nixos.org/"
+  ];
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -100,7 +114,6 @@
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     git
-    clash-verge-rev
     btop
   ];
 
