@@ -16,7 +16,7 @@
   };
 
   outputs = { self, nixpkgs, ... }: {
-    nixosConfigurations.paridis = nixpkgs.lib.nixosSystem {
+    nixosConfigurations.matebook = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
